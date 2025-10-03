@@ -1,54 +1,68 @@
 \section{Introduction}
 
 \subsection{Background of the Study}
-Provide background information about your research topic. Use citations appropriately. 
+Artificial Intelligence (AI) has become a cornerstone of modern technological development, powering applications from healthcare diagnostics to autonomous vehicles. Among the many AI approaches, neural networks—particularly deep learning models—have gained significant traction due to their ability to achieve state-of-the-art performance in complex tasks such as image recognition, speech processing, and natural language understanding. However, as the demand for AI grows, so does the need for efficient, scalable, and sustainable computational models capable of operating effectively on edge and embedded devices.
 
-\textit{Example:}
+In response to these demands, Spiking Neural Networks (SNNs) have emerged as a promising alternative to conventional Artificial Neural Networks (ANNs). Inspired by the way biological neurons communicate through discrete spikes, SNNs mimic brain-like event-driven processing, offering the potential for low-power and highly efficient computation. At the same time, ARM-based architectures dominate mobile, IoT, and embedded systems, making them the backbone of energy-conscious computing platforms. Investigating how SNNs can be implemented on ARM systems is therefore crucial for bridging neuroscience-inspired AI with practical real-world deployment.
 
-\textit{Let's assume a research study titled 'A Reinforcement Learning Approach for Phishing Detection.'} \\ \\
-With the rapid expansion of internet services, the need for effective cybersecurity has become more critical than ever. As individuals and organizations increasingly rely on digital platforms for communication, transactions, and data storage, the risk of cyber threats has grown proportionally. Among various cyberattacks, social engineering techniques—especially phishing—have emerged as a prevalent and damaging form of attack, capable of deceiving even experienced users into revealing sensitive information.
+Recent research has demonstrated considerable progress in improving the accuracy and latency of SNNs, making them more competitive with traditional deep learning models. Event-driven sensors and neuromorphic computing have also created new opportunities for real-time, energy-efficient applications. Despite these advancements, challenges remain: SNNs often face difficulties in model training, hardware–software integration, and achieving comparable accuracy without consuming significant resources. Moreover, while ARM processors are pervasive, relatively little research has focused on the direct deployment of SNNs on these architectures, leaving critical gaps in performance evaluation and optimization strategies.
 
-Phishing attacks are designed to trick users into providing personal credentials such as usernames, passwords, and financial information, typically through fraudulent emails or websites that mimic legitimate ones. These attacks are often difficult to detect due to their dynamic nature and the ever-evolving tactics used by attackers. Traditional phishing detection techniques, which rely heavily on blacklists or rule-based systems, often fail to keep up with zero-day threats or previously unseen attack patterns.
+This gap highlights the need for systematic investigation into the feasibility and limitations of deploying SNNs on ARM platforms. Without such studies, the potential of SNNs for real-time, low-power edge computing remains largely theoretical. By examining how SNNs perform on different ARM-based systems, this research aims to provide practical insights, benchmark data, and optimization guidelines that could accelerate the adoption of brain-inspired AI in resource-constrained environments. Ultimately, this study seeks to bridge the divide between the promise of SNNs and the practical realities of embedded AI deployment.
 
-To overcome these limitations, machine learning approaches have been increasingly applied to phishing detection. While supervised learning has shown promise, it depends on large volumes of labeled data and may struggle with adapting to new patterns in phishing behavior. Recent research interest has turned toward reinforcement learning (RL) — a learning paradigm that enables models to improve through interaction with their environment. RL-based systems can potentially learn to detect phishing websites by sequentially exploring and evaluating features, offering adaptability and decision-making in uncertain or changing conditions. However, despite its theoretical potential, the application of RL in phishing detection remains limited and underexplored.
 
-Given the dynamic nature of phishing attacks and the adaptability required to detect them effectively, this study aims to investigate the feasibility and performance of reinforcement learning techniques in phishing website detection. By developing and evaluating an RL-based model, the research seeks to contribute a novel, adaptive solution that addresses the shortcomings of traditional and supervised learning approaches. The findings of this study may offer insights into how intelligent agents can be used to improve real-time threat detection and cybersecurity resilience.
 
 \subsection{Problem Statement}
-Clearly state the research problem that your study aims to address.
+Artificial Intelligence (AI) is increasingly shifting toward real-time applications on edge devices such as smartphones, IoT systems, and embedded platforms. These devices require models that are not only accurate but also energy-efficient, since traditional deep learning architectures consume significant computational power and battery resources. Spiking Neural Networks (SNNs), inspired by the human brain’s event-driven signaling, have emerged as a promising alternative due to their ability to achieve computation with lower energy costs. Despite their potential, there is a noticeable gap when it comes to practical deployment: most research and optimizations for SNNs have been tested on high-performance hardware, leaving their behavior on resource-constrained platforms like ARM largely unexplored. Without addressing this gap, the widespread adoption of energy-efficient, brain-inspired AI for real-world embedded applications will remain limited.
 
-Para 1: Start by briefly explaining the broader area of your research. Provide context and explain why this domain is important or relevant today. Mention any current trends, challenges, or real-world importance to set the stage. Narrow the focus to a particular issue or gap within the broader area. Clearly state what is lacking, ineffective, or not well understood. Show why this problem matters. Describe what negative outcomes may occur if the issue is not addressed. 
+Prior research has shown that SNNs can significantly reduce energy consumption compared to conventional Artificial Neural Networks (ANNs), particularly in neuromorphic hardware and GPU-based systems (Bouvier \& Bouzerdoum, 2019; Bu et al., 2022). Frameworks such as SpiNeMap (Balaji et al., 2019) and evaluation tools like NAXT (Abderrahmane et al., 2020) have advanced the mapping and benchmarking of SNNs. However, these studies mainly focus on specialized neuromorphic chips or general-purpose processors, overlooking ARM-based architectures, which dominate the embedded and mobile computing market. As a result, there is limited empirical evidence and optimization guidelines for effectively running SNNs on ARM systems. This shortcoming prevents developers from fully understanding the trade-offs, bottlenecks, and feasibility of deploying SNNs in practical edge scenarios.
 
-Para 2: Mention what previous researchers or systems have done and explain where they fall short. Identify any areas that have not been fully explored or problems that existing methods do not adequately solve.
+The core problem is that while SNNs are recognized as energy-efficient alternatives to conventional neural networks, their implementation on ARM-based systems remains underexplored and poorly understood. The lack of systematic investigation into feasibility, performance, and limitations creates a significant barrier to realizing energy-efficient, brain-inspired AI on the world’s most widely used embedded platform. If this issue is not addressed, the potential benefits of SNNs—such as real-time low-power processing for edge and IoT devices—cannot be fully achieved. Therefore, this research aims to systematically investigate the feasibility and limitations of implementing Spiking Neural Networks on ARM architecture, providing empirical benchmarks and optimization strategies that can guide future embedded AI development.
 
-Para 3: Summarize the problem in a clear way. Clearly communicate what the issue is, why it is significant, and why it needs to be studied now. This final paragraph becomes your official problem statement. (This paragraph is what you wrote during Lesson 3.)
-
-Use citations where necessary.
 
 \subsection{Aim, Objectives and Questions}
-Explain the aim of your research. List the specific objectives of your study. State any hypotheses you plan to test (if applicable). List research questions that your study seeks to answer.
 
 \begin{itemize}
-	\item Aim: Aim goes here.
+	\item Aim: To systematically investigate the feasibility and limitations of implementing Spiking Neural Networks on ARM architecture by designing, deploying, and benchmarking SNN models across a representative range of ARM-based platforms.
+	
 	\item Objectives:
 	\begin{itemize}
-		\item Objective 1 goes here.
-		\item Objective 2 goes here.
-		\item Objective 3 goes here
-	\end{itemize} system.
+		\item 1. To conduct a comprehensive review of existing SNN models, software frameworks, and deployment methodologies suitable for ARM-based systems.
+		
+		\item 2. To design and implement benchmark SNN models for a standard machine-learning task using a selected SNN framework compatible with ARM architecture.
+		
+		\item 3. To deploy the implemented SNNs on a curated set of ARM platforms and systematically measure key performance metrics, including accuracy, inference latency, and power  consumption.
+		
+		\item 4. To Evaluate the feasibility of SNNs on ARM by examining performance data, identifying key bottlenecks, and defining operational limits.
+	\end{itemize} 
 	\item Research Questions:
 	\begin{itemize}
-		\item Question 1 goes here
-		\item Question 2 goes here
-		\item Question 3 goes here
+		\item 1. What are the technical and computational challenges of implementing Spiking Neural Networks on ARM Architecture?
+		\item 2. How do SNN implementations on ARM Architecture compare with conventional ANN's in terms of performance, energy efficiency and latency?
+		\item 3. What optimizations or adaptations are required to improve the feasibility of SNNs on ARM Systems?
+		\item 4. What methods can be used to evaluate the feasibility of SNNs on ARM Architecture?
+		\item 5. How feasible is the deployment of SNNs on ARM Architecture?
 	\end{itemize}
 \end{itemize}
 
 \subsection{Rationale of the Study}
-Explain why you are doing this research or why the study is needed.
+The rapid expansion of AI applications into mobile, IoT, and edge computing has created an urgent demand for models that can operate with high efficiency on resource-limited platforms. Conventional Artificial Neural Networks (ANNs), while powerful, are often unsuitable for these environments due to their high energy consumption and latency. Spiking Neural Networks (SNNs) represent a new frontier in AI research, inspired by the brain’s efficient, event-driven processing. With ARM processors powering the majority of mobile and embedded devices globally, exploring the deployment of SNNs on ARM has become a timely and highly relevant problem. Addressing this research now is essential, as the need for low-power, real-time AI solutions continues to grow rapidly in both industry and academia.
+
+While previous research has made progress in optimizing SNNs on specialized neuromorphic chips and high-performance GPUs, there is a clear lack of systematic studies focusing on ARM-based architectures. This gap is problematic because ARM platforms dominate everyday devices, from smartphones to embedded sensors, and are central to the growth of smart technologies. Current solutions fail to provide reliable benchmarks, performance guidelines, or optimization strategies for SNNs in these settings, leaving a major disconnect between theoretical research and practical deployment.
+
+This study is motivated by the belief that bridging this gap can have significant real-world impact. By investigating the feasibility and limitations of SNNs on ARM, the research aims to provide practical insights that could make energy-efficient, brain-inspired AI accessible to a wide range of low-power devices. For countries like Sri Lanka, where cost-effective and sustainable technology solutions are vital, this work could help advance industries such as agriculture, healthcare, and IoT-driven services. Beyond academic significance, this project reflects our group’s interest in future-ready AI methods that combine innovation with practicality, contributing to both global AI development and local technological progress.
+
 
 \subsection{Significance of the Study}
-Explain why the results are important. Think from academic and social perspectives. 
+This research holds value for both academic and practical communities. Academically, it contributes new knowledge by systematically exploring the feasibility of deploying Spiking Neural Networks (SNNs) on ARM architectures — a direction that has received limited attention compared to neuromorphic chips and GPUs. By benchmarking performance, energy efficiency, and limitations, the study provides a foundation for future researchers to build on, advancing the understanding of brain-inspired AI in embedded computing. It not only extends theoretical discussions but also offers concrete empirical data that fills a critical research gap.
+
+From a practical perspective, this study benefits industries and societies that increasingly rely on low-power, real-time AI systems. ARM processors dominate mobile phones, IoT devices, and embedded platforms used worldwide. By providing optimization strategies and performance insights for SNNs on ARM, this research can enable developers to design applications that are both energy-efficient and responsive. Potential applications include smart healthcare devices, precision agriculture systems, autonomous robotics, and wearable technology — areas where reducing power consumption is vital.
+
+Furthermore, the study introduces improvements to existing methods by aligning neuromorphic-inspired AI with the constraints of widely available hardware. This alignment makes advanced AI more accessible for developing countries like Sri Lanka, where affordable, energy-conscious solutions are essential. In this way, the research not only helps global technological innovation but also directly supports local communities and industries by enabling sustainable and practical AI deployment.
+
+Ultimately, the findings of this research can guide future academic projects, inspire further exploration into low-power AI, and serve as a stepping stone toward products, systems, and services that bring real-world benefits to diverse groups such as students, farmers, patients, and everyday technology users.
+ 
 
 \subsection{Scope and Limitations of the Study}
-Define the boundaries of your research by outlining the specific aspects or areas it will cover. Additionally, mention any limitations or constraints that may impact the extent or depth of your study.
+This research focuses on investigating the feasibility and limitations of implementing Spiking Neural Networks (SNNs) on ARM-based architectures. The study will design, deploy, and benchmark selected SNN models on representative ARM platforms, including Raspberry Pi, NVIDIA Jetson Nano, and STM32 microcontrollers. Publicly available neuromorphic datasets such as N-MNIST, DVS Gesture, and EEG Motor Movement/Imagery will be used for evaluating performance in tasks like image and gesture recognition. Key performance metrics including accuracy, inference latency, and energy consumption will be measured. The study is limited to ARM-based systems as the primary computing environment, emphasizing real-time and low-power edge computing scenarios rather than large-scale cloud or GPU platforms.
+
+The study faces certain constraints due to technical, resource, and time boundaries. First, the hardware platforms available for experimentation are limited to a small selection of ARM-based boards, which may not capture the full diversity of ARM processors used in industry. Second, only specific datasets are considered, meaning results may not fully generalize across all application domains of SNNs. Third, training large-scale SNN models is computationally intensive and may not be feasible within the time frame, requiring reliance on smaller benchmark models. Additionally, the study assumes stable software support from existing SNN frameworks, though these frameworks are still evolving and may impose restrictions on functionality. Finally, due to the academic scope and timeline of the project, the research will primarily focus on experimental validation rather than deployment into real-world commercial products.

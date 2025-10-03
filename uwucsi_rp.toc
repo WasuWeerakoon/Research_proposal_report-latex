@@ -6,10 +6,10 @@
 \contentsline {section}{\numberline {1}Introduction}{vii}{}%
 \contentsline {subsection}{\numberline {1.1}Background of the Study}{vii}{}%
 \contentsline {subsection}{\numberline {1.2}Problem Statement}{viii}{}%
-\contentsline {subsection}{\numberline {1.3}Aim, Objectives and Questions}{viii}{}%
-\contentsline {subsection}{\numberline {1.4}Rationale of the Study}{1}{}%
-\contentsline {subsection}{\numberline {1.5}Significance of the Study}{1}{}%
-\contentsline {subsection}{\numberline {1.6}Scope and Limitations of the Study}{1}{}%
+\contentsline {subsection}{\numberline {1.3}Aim, Objectives and Questions}{ix}{}%
+\contentsline {subsection}{\numberline {1.4}Rationale of the Study}{x}{}%
+\contentsline {subsection}{\numberline {1.5}Significance of the Study}{xi}{}%
+\contentsline {subsection}{\numberline {1.6}Scope and Limitations of the Study}{xi}{}%
 \contentsline {section}{\numberline {2}Literature Review}{2}{}%
 \contentsline {subsection}{\numberline {2.1}Overview of Phishing Attacks}{2}{}%
 \contentsline {subsection}{\numberline {2.2}Traditional Phishing Detection Techniques}{2}{}%
